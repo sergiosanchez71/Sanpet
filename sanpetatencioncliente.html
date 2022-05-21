@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sanpet</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+
+	@font-face {
+  		font-family: "Bianca";
+  		src: url("KRONIKA_.ttf");
+	}
+
+	body{
+		background-color: #B5EB6A;
+		font-family: "Arial", "Helvetica", sans-serif;
+	}
+
+	#contenedorprincipal{
+		width: 85em;
+		height: 50em;
+		position: relative;
+		margin: auto;
+	}
+
+
+	#gato{
+		position: relative;
+		width: 400px;
+		bottom: 900px;
+		right: 100px;
+	}
+
+	#gato2{
+		position: relative;
+		width: 400px;
+		left: 656px;
+		bottom: 900px;
+	}
+
+	#gato3{
+		position: relative;
+		width: 500px;
+		left: 450px;
+		top: 90px;
+	}
+
+	#contenedor{
+		width: 60em;
+		margin: auto;
+		background-color: white;
+		border: 2px solid black;
+	}
+
+	#cabecera{
+		border: 1px solid black;
+		background-image:  url("grupo2.jpg");
+		background-size: 450px;
+		background-repeat: no-repeat;
+		background-position: 280px 70px;
+	}
+
+	#cabecera #nombre{
+		margin: 10px;
+		margin-left: 40px;
+	}
+
+	#login{
+		position: absolute;
+		left: 64em;
+		top: 22em;
+	}
+
+	#carrito{
+		position: relative;
+		left: 27em;
+		bottom: 42px;
+	}
+
+	#menu{
+		background-color: #DBF7BC;
+		padding-top: 15px;
+		width: 60em;
+		height: 50px;
+		float: left;
+		font-family: "Bianca";
+	}
+
+	.boton{
+		background-color: #59FF67;
+		padding: 10px;
+		border-radius: 10px;
+		color: black;
+	}
+
+	.boton:hover{
+		background-color: #21B833;
+		color: white;
+	}
+
+	select{
+		float: right;
+		margin: 20px;
+	}
+
+	#cabecera form{
+		position: relative;
+		left: 720px;
+		bottom: 25px;
+	}
+
+	form input{
+		border-radius: 10px;
+	}
+
+	form #lupa{
+		position: relative;
+		top: 10px;
+	}
+
+	nav{
+		margin-left: 40px;
+	}
+
+	li{
+		list-style: none;
+		padding: 6px;
+		width: 100px;
+	}
+
+	.botonli{
+	 	margin-left: 51px;
+	}
+
+	a{
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	nav > li {
+		float: left;
+	}
+
+	nav li > ul {
+		display: none;
+	}
+
+	nav li:hover > ul {
+		position: relative;
+		display: block;
+		background-color: #59FF67;
+		opacity: 0.9;
+		width: 150px;
+		height: 100%;
+		border-radius: 20px;
+	}
+
+	nav li > ul li a{
+		color: black;
+	}
+
+	nav li > ul li a:hover{
+		background-color: #21B833;
+		color: white;
+		padding: 6px;
+		border-radius: 10px;
+	}
+
+	/* Cuerpo atención al cliente */
+	#contenido{
+		text-align: center;
+		margin: auto;
+		position: relative;
+		width: 500px;
+		height: 550px;
+		font-family: "Bianca";
+
+	}
+
+	#formulario{
+		position: relative;
+		margin-top: 110px;
+		width: 500px;
+		height: 500px;
+		padding: 20px;
+	}
+
+	#formulario:hover{
+		background-color: #FFFDBB;
+		border-radius: 50px;
+	}
+
+	#mensaje{
+		width: 250px;
+		height: 250px;
+		overflow: scroll;
+	}
+
+	footer{
+		margin-top: 50px;
+		text-align: center;
+	}
+
+	footer #atecliente{
+		color: #21B833;
+	}
+
+	footer #atecliente:hover{
+		background-color: #21B833;
+		color: white;
+		padding: 6px;
+		border-radius: 10px;
+	}
+
+</style>
+<body>
+	
+
+<div id="contenedorprincipal">
+
+	<img src="images/gato3.png" id="gato3" alt="gato3">
+
+	<div id="contenedor">
+
+		<div id="cabecera">
+
+			<select>
+				<option value="1">Español</option>
+				<option value="2">Inglés</option>
+			</select>
+			<a href="index.html"><img src="images/sanpetcompletoverde.png" id="nombre" alt="nombre"></a>
+
+				<a href="#entrar" id="login"><img src="images/entrar.png" width="40px" alt="entrar"></a>
+				<a href="#carrito" id="carrito"><img src="images/carrito.png" width="40px" alt="carrito"></a>
+
+			<form>
+				<input type="search">
+				<input src="images/b1.png" id="lupa" type="image" width="30px" alt="lupa">
+			</form>
+
+		</div>
+
+		<div id="menu">
+
+			<nav>
+				<li class="botonli">
+					<a href="#" class="boton">Perros</a>
+					<ul>
+						<li><a href="#op1">Pienso</a></li>
+						<li><a href="#op2">Comida</a></li>
+						<li><a href="#op3">Camas</a></li>
+					</ul>
+				</li>
+				<li class="botonli">
+					<a href="#2" class="boton">Gatos</a>
+					<ul>
+						<li><a href="#op1">Pienso</a></li>
+						<li><a href="#op2">Comida</a></li>
+						<li><a href="#op3">Arena</a></li>
+					</ul>
+				</li>
+				<li class="botonli">
+					<a href="#3" class="boton">Peces</a>
+					<ul>
+						<li><a href="#op1">Filtros</a></li>
+						<li><a href="#op2">Comida</a></li>
+						<li><a href="#op3">Acuarios</a></li>
+					</ul>
+				</li>
+				<li class="botonli">
+					<a href="#4" class="boton">Pájaros</a>
+					<ul>
+						<li><a href="#op1">Jaulas</a></li>
+						<li><a href="#op2">Comida</a></li>
+						<li><a href="#op3">Snaks</a></li>
+					</ul>
+				</li>
+				<li class="botonli">
+					<a href="#5" class="boton">Réptiles</a>
+					<ul>
+						<li><a href="#op1">Terrarios</a></li>
+						<li><a href="#op2">Comida</a></li>
+						<li><a href="#op3">Tortugueras</a></li>
+					</ul>
+				</li>
+			</nav>
+
+		</div>
+		<div id="contenido">
+
+			<div id="formulario">
+
+				<h1>Atención al cliente</h1>
+
+				<form>
+
+					<p>Nombre: <input type="text" id="nombre"></p>
+					<p>Correo electrónico: <input type="text" id="correo"></p>
+					<p>Contacta con nosotros</p>
+					<p><textarea id="mensaje"></textarea></p>
+					<input type="submit" name="enviar" value="Enviar">
+
+				</form>
+
+			</div>
+
+		</div>
+
+		<footer>
+			
+			<a href="#instagram"><img src="images/instagram.png" width="30px" alt="instagram"></a>
+			<a href="#facebook"><img src="images/facebook.png" width="30px" alt="facebook"></a>
+			<a href="#youtube"><img src="images/youtube.png" width="30px" alt="youtube"></a>
+
+			<p><a href="sanpetatencioncliente.html" id="atecliente">Atención al cliente</a> <small>&copy Sanpet</small></p>
+
+		</footer>
+
+	</div>
+
+	<img alt="gato" id="gato" src="images/gato.png">
+	<img alt="gato2" id="gato2" src="images/gato2.png">
+
+</div>
+
+</body>
+</html>

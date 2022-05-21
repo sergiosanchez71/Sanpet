@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sanpet</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+
+	/* Fuente que utilizaremos en el menú */
+	@font-face {
+  		font-family: "Bianca";
+  		src: url("KRONIKA_.ttf");
+	}
+
+	body{
+		background-color: #B5EB6A;
+		font-family: "Arial", "Helvetica", sans-serif;
+	}
+
+	/*Contenedor que envuelve todo */
+	#contenedorprincipal{
+		width: 85em;
+		height: 50em;
+		position: relative;
+		margin: auto;
+	}
+
+	/* Gato izquierda */
+	#gato{
+		position: relative;
+		width: 400px;
+		bottom: 1400px;
+		right: 100px;
+	}
+
+	/* Gato derecha */
+	#gato2{
+		position: relative;
+		width: 400px;
+		left: 656px;
+		bottom: 1400px;
+	}
+
+	/* Animales de arriba */
+	#gato3{
+		position: relative;
+		width: 500px;
+		left: 450px;
+		top: 90px;
+	}
+
+	/* Contenedor que envuelve la cabecera,contenido y pie */
+	#contenedor{
+		width: 60em;
+		margin: auto;
+		background-color: white;
+		border: 2px solid black;
+	}
+
+	/* Parte superior de la página (cabecera)*/
+	#cabecera{
+		border: 1px solid black;
+		background-image:  url("grupo2.jpg");
+		background-size: 450px;
+		background-repeat: no-repeat;
+		background-position: 280px 70px;
+	}
+
+	/* Margenes para el nombre de la página y la cabecera */
+	#cabecera #nombre{
+		margin: 10px;
+		margin-left: 40px;
+	}
+
+	/* La imagen del login */
+	#login{
+		position: absolute;
+		left: 64em;
+		top: 22em;
+	}
+
+	/* Imagen del carrito */
+	#carrito{
+		position: relative;
+		left: 27em;
+		bottom: 42px;
+	}
+
+	/* Menú completo al que aplicamos la nueva fuente */
+	#menu{
+		background-color: #DBF7BC;
+		padding-top: 15px;
+		width: 60em;
+		height: 50px;
+		float: left;
+		font-family: "Bianca";
+	}
+
+	/* Cada uno de los botones del menú */
+	.boton{
+		background-color: #59FF67;
+		padding: 10px;
+		border-radius: 10px;
+		color: black;
+	}
+
+	/* Cuando tengamos el cursor sobre cada botón del menú */
+	.boton:hover{
+		background-color: #21B833;
+		color: white;
+	}
+
+	/* Lista desplegable del idioma */
+	select{
+		float: right;
+		margin: 20px;
+	}
+
+	/* El buscador */
+	form{
+		position: relative;
+		left: 720px;
+		bottom: 25px;
+	}
+
+	/* El campo de texto de nuestro buscador */
+	form input{
+		border-radius: 10px;
+	}
+
+	/* La imagen de nuestro buscador (lupa) */
+	form #lupa{
+		position: relative;
+		top: 10px;
+	}
+
+	/* Todo el menú de navegadción */
+	nav{
+		margin-left: 40px;
+	}
+
+	/* Nombre de cada sección */
+	li{
+		list-style: none;
+		padding: 6px;
+		width: 100px;
+	}
+
+	/* Cada botón y su separación */
+	.botonli{
+	 	margin-left: 51px;
+	}
+
+	/* Todos los enlaces */
+	a{
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	/* Las listas dentro del navegador */
+	nav > li {
+		float: left;
+	}
+
+	/* Nuestra lista dentro de cada sección de nuestro navegador */
+	nav li > ul {
+		display: none;
+	}
+
+	/* Cuando tengamos el cursor encima de cada sección */
+	nav li:hover > ul {
+		position: relative;
+		display: block;
+		background-color: #59FF67;
+		opacity: 0.9;
+		width: 150px;
+		height: 100%;
+		border-radius: 20px;
+	}
+
+	/* Los enlaces dentro de cada subsección */
+	nav li > ul li a{
+		color: black;
+	}
+
+	/* Los enlaces de las subsecciones cuando tenemos el cursor encima */
+	nav li > ul li a:hover{
+		background-color: #21B833;
+		color: white;
+		padding: 6px;
+		border-radius: 10px;
+	}
+
+	/* Todo el contenido, cuerpo de la página */
+	#contenido{
+		float: left;
+	}
+
+	/* Cada uno de los contenedores del cuerpo de la página */
+	#p1,#p2,#p3,#p4{
+		float: left;
+	}
+
+	#p2,#p3,#p4{
+		padding: 15px;
+		text-align: justify;
+	}
+
+	#p1,#p3,#p4{
+		border: 1px solid black;
+		border-radius: 20px;
+		margin: 10px;
+		box-shadow: 5px 5px #E9E9E9;
+	}
+
+	/* Parrafo uno del cuerpo de la página (izquierda)*/
+	#p1{
+		width: 180px;
+		height: 860px;
+		box-shadow: 5px 5px #E9E9E9;
+	}
+
+	#p1 strong{
+		color: green;
+	}
+
+	/* Lista del párrafo uno */
+	#p1 ul{
+		margin-top: 40px;
+		font-size: 14px;
+		margin-right: 15px;
+	}
+
+	#p1 ul li{
+		margin-left: 5px;
+		margin-top: 5px;
+	}
+
+	#p1 ul li a{
+		color: black;
+	}
+
+	#p1 ul li a:hover{
+		color: #2AE841;
+	}
+
+
+	/* Párrafo dos dentro del cuerpo, central */
+	#p2{
+		width: 440px;
+		height: 830px;
+	}
+
+	#p2 div:hover, #p3:hover, #p4:hover{
+		background-color: #FFFDBB;
+	}
+
+	#p2 p, h3{
+		width: 200px;
+		float: left;
+		padding-left: 20px;
+		text-align: center;
+	}
+
+	#p2 img{
+		padding-left: 50px;
+		margin: 10px;
+	}
+
+	/* Dentro del párrafo central (2) cada uno de los productos */
+	.articulo{
+		border: 1px solid black;
+		margin-top: 10px;
+		border-radius: 20px;
+		box-shadow: 5px 5px #E9E9E9;
+		height: 275px;
+	}
+
+	#p3 h3,p #p4 h3,p{
+		text-align: center;
+	}
+
+	/* El párrafo 3, situado en la derecha arriba */
+	#p3{
+		width: 230px;
+		height: 400px;
+	}
+
+	/* El párrafo 4, situado en la derecha abajo */
+	#p4{
+		width: 230px;
+		height: 400px;
+	}
+
+	#p3 img, #p4 img{
+		padding-left: 15px;
+	}
+
+	/*Pie de página*/
+	footer{
+		text-align: center;
+	}
+
+	/*Atención al cliente*/
+	footer #atecliente{
+		color: #21B833;
+	}
+
+	footer #atecliente:hover{
+		background-color: #21B833;
+		color: white;
+		padding: 6px;
+		border-radius: 10px;
+	}
+
+</style>
+<body>
+	
+
+<div id="contenedorprincipal">
+
+	<img src="images/gato3.png" id="gato3" alt="gato3">
+
+	<div id="contenedor">
+
+		<div id="cabecera">
+
+			<select>
+				<option value="1">Español</option>
+				<option value="2">Inglés</option>
+			</select>
+			<a href="index.html"><img src="images/sanpetcompletoverde.png" id="nombre" alt="nombre"></a>
+
+				<a href="#entrar" id="login"><img src="images/entrar.png" width="40px" alt="entrar"></a>
+				<a href="#carrito" id="carrito"><img src="images/carrito.png" width="40px" alt="carrito"></a>
+
+			<form>
+				<input type="search">
+				<input src="images/b1.png" id="lupa" type="image" width="30px" alt="lupa">
+			</form>
+
+		</div>
+
+		<div id="menu">
+
+			<nav>
+				<li class="botonli">
+					<a href="#" class="boton">Perros</a>
+					<ul>
+						<li><a href="#op1">Pienso</a></li>
+						<li><a href="#op2">Comida</a></li>
+						<li><a href="#op3">Camas</a></li>
+					</ul>
+				</li>
+				<li class="botonli">
+					<a href="#2" class="boton">Gatos</a>
+					<ul>
+						<li><a href="#op1">Pienso</a></li>
+						<li><a href="#op2">Comida</a></li>
+						<li><a href="#op3">Arena</a></li>
+					</ul>
+				</li>
+				<li class="botonli">
+					<a href="#3" class="boton">Peces</a>
+					<ul>
+						<li><a href="#op1">Filtros</a></li>
+						<li><a href="#op2">Comida</a></li>
+						<li><a href="#op3">Acuarios</a></li>
+					</ul>
+				</li>
+				<li class="botonli">
+					<a href="#4" class="boton">Pájaros</a>
+					<ul>
+						<li><a href="#op1">Jaulas</a></li>
+						<li><a href="#op2">Comida</a></li>
+						<li><a href="#op3">Snaks</a></li>
+					</ul>
+				</li>
+				<li class="botonli">
+					<a href="#5" class="boton">Réptiles</a>
+					<ul>
+						<li><a href="#op1">Terrarios</a></li>
+						<li><a href="#op2">Comida</a></li>
+						<li><a href="#op3">Tortugueras</a></li>
+					</ul>
+				</li>
+			</nav>
+
+		</div>
+		<div id="contenido">
+			
+			<img src="images/oferta.png" width="960px" alt="oferta">
+
+			<div id="p1">
+				<ul>
+					<strong>Perros</strong>
+					<li><a href="#i1">Pienso</a></li>
+					<li><a href="#i2">Comida</a></li>
+					<li><a href="#i3">Camas</a></li>
+					<li><a href="#i4">Casetas</a></li>
+				</ul>
+				<ul>
+					<strong>Gatos</strong>
+					<li><a href="#i1">Pienso</a></li>
+					<li><a href="#i2">Comida</a></li>
+					<li><a href="#i3">Arena</a></li>
+					<li><a href="#i4">Areneros</a></li>
+				</ul>
+				<ul>
+					<strong>Pájaros</strong>
+					<li><a href="#i1">Comida</a></li>
+					<li><a href="#i2">Jaulas</a></li>
+					<li><a href="#i3">Snacks</a></li>
+					<li><a href="#i4">Accesorios</a></li>
+				</ul>
+				<ul>
+					<strong>Peces</strong>
+					<li><a href="#i1">Comida</a></li>
+					<li><a href="#i2">Filtros</a></li>
+					<li><a href="#i3">Acuarios</a></li>
+					<li><a href="#i4">Limpieza de agua</a></li>
+				</ul>
+			</div>
+
+			<div id="p2">
+				
+				<div class="articulo">
+
+					<h3>Hill's prescription diet metabolic original</h3>
+
+					<p>Alimento innovador que ayuda a tu mascota a perder peso y a mantenerlo con un porcentaje de éxito del 96%.</p>
+
+					<p><strong>33.29€ - 59.95€</strong></p>
+
+					<img src="images/i1.png" width="140px" alt="oferta1">
+
+				</div>
+
+				<div class="articulo">
+
+					<h3>Lecho Aglomerante Nova clean 10 litros</h3>
+
+					<p>Arena aglomerante con perfume de jabón de marsella</p>
+
+					<p><strong>5.95€</strong></p>
+
+					<img src="images/i2.png" width="120px" alt="oferta2"> 
+
+				</div>
+
+				<div class="articulo">
+
+					<h3>Vitakraft menú periquitos premium 1KG</h3>
+
+					<p>Alimento a base de mezcla de semillas.</p>
+
+					<p><strong>3.50€</strong></p>
+
+					<img src="images/i3.png" width="140px" alt="oferta3">
+
+				</div>
+
+			</div>
+
+			<div id="p3">
+
+				<h3>Aquaclear filtro mochila30</h3>
+				
+				<p>Filtro Aquaclear que facilita la circulación del agua</p>
+				<p><strong>39.99€</strong></p>
+
+				<img src="images/i4.png" width="200px" alt="oferta4">
+
+			</div>
+
+			<div id="p4">
+				
+				<h3>Transportín Outech route</h3>
+
+				<p>Transportín para perros pequeños, fabricado para poder llevar a tu mascota de la manera más cómoda </p>
+
+				<p><strong>18.95€</strong></p>
+
+				<img src="images/i5.png" width="200px" alt="oferta5">
+
+			</div>
+
+		</div>
+
+		<footer>
+			
+			<a href="#instagram"><img src="images/instagram.png" width="30px" alt="instagram"></a>
+			<a href="#facebook"><img src="images/facebook.png" width="30px" alt="facebook"></a>
+			<a href="#youtube"><img src="images/youtube.png" width="30px" alt="youtube"></a>
+
+			<p><a href="sanpetatencioncliente.html" id="atecliente">Atención al cliente</a> <small>&copy Sanpet</small></p>
+
+		</footer>
+
+	</div>
+
+	<img alt="gato" id="gato" src="images/gato.png">
+	<img alt="gato2" id="gato2" src="images/gato2.png">
+
+</div>
+
+</body>
+</html>
